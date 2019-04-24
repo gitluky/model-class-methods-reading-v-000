@@ -15,6 +15,7 @@ class PostsController < ApplicationController
     end
 
     @posts = Post.all
+
   end
 
   def show
