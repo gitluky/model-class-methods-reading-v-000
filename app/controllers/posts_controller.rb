@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def index
+        @authors = Author.all
 
     if !params[:author].blank?
       @posts = Post.where(author: params[:author])
@@ -12,8 +13,6 @@ class PostsController < ApplicationController
       end
     end
 
-
-    @authors = Author.all
     @posts = Post.all
   end
 
